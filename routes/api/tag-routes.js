@@ -64,14 +64,14 @@ router.put('/:id', async (req, res) => {
 router.delete('/:id', async (req, res) => {
   // delete on tag by its `id` value
   try {
-    const updateTag = await Tag.destroy(
+    const destroyTag = await Tag.destroy(
       {
         where: {
           id: req.params.id
         }
       }
     );
-    res.status(200).json(updateTag);
+    res.status(200).json(destroyTag);
   } catch (err) {
     res.status(400).json(err);
   }
