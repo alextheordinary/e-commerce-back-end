@@ -16,12 +16,12 @@ Product.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    category_name: {
+    product_name: {
       type: DataTypes.STRING,
       allowNull: false,
     },
     price: {
-      type: DataTypes.DECIMAL,
+      type: DataTypes.DECIMAL(10,2),
       allowNull: false,
       defaultValue: 10,
       validate: {
